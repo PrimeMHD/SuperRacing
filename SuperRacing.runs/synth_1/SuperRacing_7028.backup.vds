@@ -1,0 +1,540 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Dec 27 19:41:52 2017
+# Process ID: 7028
+# Current directory: D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1
+# Command line: vivado.exe -log SuperRacing.vds -mode batch -messageDb vivado.pb -notrace -source SuperRacing.tcl
+# Log file: D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/SuperRacing.vds
+# Journal file: D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source SuperRacing.tcl -notrace
+Command: synth_design -top SuperRacing -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17324 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 307.023 ; gain = 99.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SuperRacing' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:3]
+INFO: [Synth 8-638] synthesizing module 'CentralController' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:4]
+INFO: [Synth 8-638] synthesizing module 'CollisionJudge' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CollisionJudge.v:5]
+INFO: [Synth 8-256] done synthesizing module 'CollisionJudge' (1#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CollisionJudge.v:5]
+WARNING: [Synth 8-689] width (11) of port connection 'user_posx' does not match port width (10) of module 'CollisionJudge' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:150]
+WARNING: [Synth 8-689] width (11) of port connection 'user_posy' does not match port width (10) of module 'CollisionJudge' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:151]
+WARNING: [Synth 8-689] width (11) of port connection 'enemy1_posy' does not match port width (10) of module 'CollisionJudge' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:154]
+WARNING: [Synth 8-689] width (11) of port connection 'enemy2_posy' does not match port width (10) of module 'CollisionJudge' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:155]
+INFO: [Synth 8-256] done synthesizing module 'CentralController' (2#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:4]
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/VGA.v:3]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/vga_sync.v:3]
+	Parameter PAL bound to: 640 - type: integer 
+	Parameter LAF bound to: 480 - type: integer 
+	Parameter PLD bound to: 800 - type: integer 
+	Parameter LFD bound to: 525 - type: integer 
+	Parameter HPW bound to: 96 - type: integer 
+	Parameter HFP bound to: 16 - type: integer 
+	Parameter VPW bound to: 2 - type: integer 
+	Parameter VFP bound to: 10 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/vga_sync.v:63]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/vga_sync.v:113]
+WARNING: [Synth 8-5788] Register line_cnt_reg in module vga_sync is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/vga_sync.v:38]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (3#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/vga_sync.v:3]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (4#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/VGA.v:3]
+WARNING: [Synth 8-689] width (19) of port connection 'address_sig' does not match port width (17) of module 'VGA' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:54]
+INFO: [Synth 8-638] synthesizing module 'RAM_MANAGER' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:11]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (5#1) [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (6#1) [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_2' [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_2' (7#1) [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_3' [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_3' (8#1) [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_4' [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_4' (9#1) [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM_MANAGER' (10#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:11]
+WARNING: [Synth 8-689] width (19) of port connection 'address_sig' does not match port width (17) of module 'RAM_MANAGER' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:68]
+INFO: [Synth 8-638] synthesizing module 'INPUTSIG_CONVERTOR' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/INPUTSIG_CONVERTOR.v:3]
+INFO: [Synth 8-256] done synthesizing module 'INPUTSIG_CONVERTOR' (11#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/INPUTSIG_CONVERTOR.v:3]
+WARNING: [Synth 8-3848] Net seg_select in module/entity SuperRacing does not have driver. [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:14]
+WARNING: [Synth 8-3848] Net seg_LED in module/entity SuperRacing does not have driver. [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:15]
+INFO: [Synth 8-256] done synthesizing module 'SuperRacing' (12#1) [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/SuperRacing.v:3]
+WARNING: [Synth 8-3331] design CentralController has unconnected port clk100mhz
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[3]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[2]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[1]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[0]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[6]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[5]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[4]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[3]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[2]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[1]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 344.414 ; gain = 136.906
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 344.414 ; gain = 136.906
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'blk_mem_gen_0' instantiated as 'RMINST/Background' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:40]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'blk_mem_gen_1' instantiated as 'RMINST/CarShapeRom' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:41]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'blk_mem_gen_2' instantiated as 'RMINST/CollisionRom' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:42]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'blk_mem_gen_3' instantiated as 'RMINST/StartPicture' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:43]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'blk_mem_gen_4' instantiated as 'RMINST/OverPicture' [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:44]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp/blk_mem_gen_1_in_context.xdc] for cell 'RMINST/CarShapeRom'
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp/blk_mem_gen_1_in_context.xdc] for cell 'RMINST/CarShapeRom'
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_2/blk_mem_gen_2_in_context.xdc] for cell 'RMINST/CollisionRom'
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_2/blk_mem_gen_2_in_context.xdc] for cell 'RMINST/CollisionRom'
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_3/blk_mem_gen_3_in_context.xdc] for cell 'RMINST/StartPicture'
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_3/blk_mem_gen_3_in_context.xdc] for cell 'RMINST/StartPicture'
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_4/blk_mem_gen_4_in_context.xdc] for cell 'RMINST/OverPicture'
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_4/blk_mem_gen_4_in_context.xdc] for cell 'RMINST/OverPicture'
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_5/blk_mem_gen_0_in_context.xdc] for cell 'RMINST/Background'
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.runs/synth_1/.Xil/Vivado-7028-DESKTOP-HD/dcp_5/blk_mem_gen_0_in_context.xdc] for cell 'RMINST/Background'
+Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.srcs/constrs_1/new/test.xdc]
+Finished Parsing XDC File [D:/vivado_project/SuperRacing/SuperRacing.srcs/constrs_1/new/test.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado_project/SuperRacing/SuperRacing.srcs/constrs_1/new/test.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SuperRacing_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/SuperRacing_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 644.184 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:88]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/CentralController.v:76]
+INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "h_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "v_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <unary minus> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <unary minus> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:60]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+WARNING: [Synth 8-3936] Found unconnected internal register 'address_small_17_reg' and it is trimmed from '17' to '14' bits. [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:60]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:69]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:75]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [D:/vivado_project/SuperRacing/SuperRacing.srcs/sources_1/new/RAM_MANAGER.v:82]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 7     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 7     
+	   3 Input     11 Bit       Adders := 2     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 7     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CollisionJudge 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module CentralController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 4     
+Module VGA 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module RAM_MANAGER 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module INPUTSIG_CONVERTOR 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vga_syn_inst/line_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/v_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/h_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/vsync" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP address_sig_190, operation Mode is: C+A*(B:0x140).
+DSP Report: operator address_sig_190 is absorbed into DSP address_sig_190.
+DSP Report: operator address_sig_191 is absorbed into DSP address_sig_190.
+DSP Report: Generating DSP modi_address_sig_road, operation Mode is: C-A*(B:0x140).
+DSP Report: operator modi_address_sig_road is absorbed into DSP modi_address_sig_road.
+DSP Report: operator modi_address_sig_road0 is absorbed into DSP modi_address_sig_road.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+(D-A)*(B:0x5a)+1.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+WARNING: [Synth 8-3331] design CentralController has unconnected port clk100mhz
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[3]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[2]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[1]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_select[0]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[6]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[5]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[4]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[3]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[2]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[1]
+WARNING: [Synth 8-3331] design SuperRacing has unconnected port seg_LED[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 644.184 ; gain = 436.676
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VGA         | C+A*(B:0x140)      | 10     | 9      | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|RAM_MANAGER | C-A*(B:0x140)      | 11     | 9      | 17     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|RAM_MANAGER | C+(D-A)*(B:0x5a)+1 | 13     | 8      | 14     | 11     | 14     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[18]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[17]) is unused and will be removed from module SuperRacing.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 644.184 ; gain = 436.676
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 644.184 ; gain = 436.676
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 658.559 ; gain = 451.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 658.559 ; gain = 451.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[16]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[15]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[14]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[13]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[12]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[11]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[10]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[9]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[8]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[7]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[6]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[5]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[4]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[3]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[2]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[1]) is unused and will be removed from module SuperRacing.
+WARNING: [Synth 8-3332] Sequential element (VGA_INST/address_sig_19_reg[0]) is unused and will be removed from module SuperRacing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 679.820 ; gain = 472.313
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
+|2     |blk_mem_gen_1 |         1|
+|3     |blk_mem_gen_2 |         1|
+|4     |blk_mem_gen_3 |         1|
+|5     |blk_mem_gen_4 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |blk_mem_gen_1 |     1|
+|3     |blk_mem_gen_2 |     1|
+|4     |blk_mem_gen_3 |     1|
+|5     |blk_mem_gen_4 |     1|
+|6     |BUFG          |     3|
+|7     |CARRY4        |    60|
+|8     |DSP48E1_1     |     1|
+|9     |DSP48E1_2     |     1|
+|10    |DSP48E1_3     |     1|
+|11    |LUT1          |    66|
+|12    |LUT2          |   120|
+|13    |LUT3          |    30|
+|14    |LUT4          |    66|
+|15    |LUT5          |    56|
+|16    |LUT6          |    56|
+|17    |FDRE          |   114|
+|18    |FDSE          |    10|
+|19    |IBUF          |     8|
+|20    |OBUF          |    14|
+|21    |OBUFT         |    11|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-----------------+-------------------+------+
+|      |Instance         |Module             |Cells |
++------+-----------------+-------------------+------+
+|1     |top              |                   |   677|
+|2     |  CCINST         |CentralController  |   230|
+|3     |  ICINST         |INPUTSIG_CONVERTOR |     4|
+|4     |  RMINST         |RAM_MANAGER        |   160|
+|5     |  VGA_INST       |VGA                |   246|
+|6     |    vga_syn_inst |vga_sync           |   200|
++------+-----------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 679.820 ; gain = 143.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 679.820 ; gain = 472.313
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 683.395 ; gain = 451.445
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 683.395 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 27 19:42:39 2017...

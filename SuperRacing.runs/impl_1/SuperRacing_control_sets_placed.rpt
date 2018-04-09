@@ -1,0 +1,77 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Dec 30 23:11:31 2017
+| Host         : DESKTOP-HD running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file SuperRacing_control_sets_placed.rpt
+| Design       : SuperRacing
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    24 |
+| Unused register locations in slices containing registers |   107 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             103 |           56 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              25 |           10 |
+| Yes          | No                    | No                     |              26 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             131 |           39 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-------------------------------------+--------------------------------+------------------+----------------+
+|     Clock Signal     |            Enable Signal            |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------------+-------------------------------------+--------------------------------+------------------+----------------+
+|  SRINST/sclk_reg_n_0 |                                     | SRINST/seg_select[7]_i_1_n_0   |                1 |              1 |
+|  SRINST/sclk_reg_n_0 |                                     | SRINST/Q[0]                    |                1 |              1 |
+|  VGA_INST/clk50mhz   |                                     |                                |                1 |              1 |
+|  clk_25mhz_BUFG      | VGA_INST/vga_syn_inst/hsync_i_1_n_0 |                                |                1 |              1 |
+|  SRINST/sclk_reg_n_0 |                                     | SRINST/Q[2]                    |                1 |              2 |
+|  SRINST/sclk_reg_n_0 |                                     | SRINST/Q[1]                    |                2 |              4 |
+|  VSync_OBUF_BUFG     | CCINST/roadiniline_reg[10]_0        | CCINST/enemy2_posy[5]_i_1_n_0  |                2 |              4 |
+|  VSync_OBUF_BUFG     | CCINST/roadiniline_reg[10]_0        | CCINST/enemy1_posy0_in[7]      |                2 |              4 |
+|  VSync_OBUF_BUFG     |                                     |                                |                3 |              5 |
+|  VSync_OBUF_BUFG     | CCINST/game_state[0]                | CCINST/enemy2_posy[10]_i_1_n_0 |                2 |              7 |
+|  VSync_OBUF_BUFG     | CCINST/game_state[0]                | CCINST/enemy1_posy0_in[8]      |                2 |              7 |
+|  VSync_OBUF_BUFG     | CCINST/enemy1_posy0_in[7]           | CCINST/enemy1_posx[9]_i_1_n_0  |                3 |              8 |
+|  SRINST/sclk_reg_n_0 |                                     |                                |                6 |             10 |
+|  VSync_OBUF_BUFG     | CCINST/enemy2_posy[5]_i_1_n_0       | CCINST/enemy2_posx[9]_i_1_n_0  |                4 |             10 |
+|  VSync_OBUF_BUFG     | CCINST/roadiniline_reg[10]_0        | CCINST/SR[0]                   |                3 |             11 |
+|  VSync_OBUF_BUFG     | CCINST/user_posx[10]_i_2_n_0        | CCINST/user_posx[10]_i_1_n_0   |                3 |             11 |
+|  VSync_OBUF_BUFG     | CCINST/user_posy[10]_i_1_n_0        | CCINST/user_posx[10]_i_1_n_0   |                3 |             11 |
+|  clk_25mhz_BUFG      | VGA_INST/vga_syn_inst/E[0]          |                                |                6 |             11 |
+|  clk100mhz_IBUF_BUFG | RMINST/address_small_17             |                                |                4 |             14 |
+|  clk100mhz_IBUF_BUFG |                                     | SRINST/sclk                    |                5 |             17 |
+|  clk_25mhz_BUFG      |                                     |                                |               13 |             26 |
+|  VSync_OBUF_BUFG     | CCINST/score[0]_i_2_n_0             | CCINST/score[0]_i_1_n_0        |                7 |             29 |
+|  clk100mhz_IBUF_BUFG | CCINST/Timer                        | CCINST/cjinst/Timer_reg[0]     |                8 |             29 |
+|  clk100mhz_IBUF_BUFG |                                     |                                |               33 |             61 |
++----------------------+-------------------------------------+--------------------------------+------------------+----------------+
+
+

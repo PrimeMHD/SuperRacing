@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1514646551">
+  <File Type="ROUTE-STATUS-PB" Name="SuperRacing_route_status.pb"/>
+  <File Type="PA-TCL" Name="SuperRacing.tcl"/>
+  <File Type="OPT-DCP" Name="SuperRacing_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="SuperRacing_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="SuperRacing_methodology_drc_opted.rpt"/>
+  <File Type="RDI-RDI" Name="SuperRacing.vdi"/>
+  <File Type="PWROPT-DRC" Name="SuperRacing_drc_pwropted.rpt"/>
+  <File Type="OPT-DRC" Name="SuperRacing_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="SuperRacing_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="SuperRacing.hwdef"/>
+  <File Type="OPT-TIMING" Name="SuperRacing_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="SuperRacing_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="SuperRacing_placed.dcp"/>
+  <File Type="PLACE-IO" Name="SuperRacing_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="SuperRacing_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="SuperRacing_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="SuperRacing_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="SuperRacing_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="SuperRacing_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="SuperRacing_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="SuperRacing_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="SuperRacing_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="SuperRacing_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="SuperRacing_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="SuperRacing_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="SuperRacing_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="SuperRacing_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="SuperRacing_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="SuperRacing_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="SuperRacing_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SuperRacing_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SuperRacing_methodology_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="SuperRacing.bit"/>
+  <File Type="ROUTE-PWR" Name="SuperRacing_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="SuperRacing_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="SuperRacing_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="SuperRacing_route_status.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="SuperRacing_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="SuperRacing_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="SuperRacing_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="SuperRacing_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="SuperRacing_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="SuperRacing_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="SuperRacing_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SuperRacing_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SuperRacing_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SuperRacing_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIN" Name="SuperRacing.bin"/>
+  <File Type="BITSTR-MSK" Name="SuperRacing.msk"/>
+  <File Type="BITSTR-RBT" Name="SuperRacing.rbt"/>
+  <File Type="BITSTR-NKY" Name="SuperRacing.nky"/>
+  <File Type="BITSTR-BMM" Name="SuperRacing_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="SuperRacing.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="SuperRacing.sysdef"/>
+  <File Type="BG-BGN" Name="SuperRacing.bgn"/>
+  <File Type="BG-DRC" Name="SuperRacing.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/display7.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RandomProductor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Definition.h">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Definition.h"/>
+        <Attr Name="ImportTime" Val="1464454477"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CollisionJudge.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/INPUTSIG_CONVERTOR.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SCORE_RECORDER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CentralController.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RAM_MANAGER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/VGA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SuperRacing.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RotationEncoder.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_vga.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/startpic.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_3/ready.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_2/collision.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RandomProducer.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_1/carshape.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/over.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/road.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_3/ready_320.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_4/over_320.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0_1/road_320.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_1/newcar.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/usercarshape.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_5/enemyshape.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_2/newcollision.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SuperRacing"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/test.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/test.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_5"/>
+</GenRun>

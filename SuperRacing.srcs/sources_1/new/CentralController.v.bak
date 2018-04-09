@@ -1,0 +1,156 @@
+`timescale 1ns / 1ps
+`include "Definition.h"
+
+module CentralController(
+input clk100mhz,//100Mhz的时钟信号
+input [3:0]BasicSpeed,//车辆移动的基本速度
+input SW,//氮气喷气开关
+input [1:0]Direction,//玩家车辆移动的方向
+input [18:0]address_sig,//显存读写地址
+output reg[1:0]game_state=`state_ready,//游戏状态
+output rst,//上升沿能够让显存重置
+output reg [9:0]user_posx=300,  //玩家的左上角x坐标
+output reg [9:0]user_posy=320,  //玩家的左上角y坐标
+output reg signed [9:0]enemy1_posx=10, //敌人1的左上角x坐标
+output reg signed [9:0]enemy1_posy=10, //敌人1的左上角y坐标    
+output reg signed [9:0]enemy2_posx=170, //敌人2的左上角x坐标
+output reg signed [9:0]enemy2_posy=450 //敌人2的左上角y坐标
+//output reg[9:0]pixel_x,     //正在刷新的像素x坐标
+//output reg[9:0]pixel_y      //正在刷新的像素y坐标
+    );
+    
+    
+   // reg [1:0]game_state;
+   // reg user_posx=300;
+    //reg user_posy=320;
+    //reg enemy1_posx=10;
+    //reg enemy1_posy=10;
+    //reg enemy2_posy=170;
+    //reg enemy2_posx=450;
+    
+    
+    //游戏初始值
+    integer Timer;
+    reg has_collision;
+    wire [9:0]RandomX;
+    
+    always@(posedge clk100mhz or posedge SW)begin
+        if(game_state==`state_ready&&SW==1'b1)begin
+            game_state<=`state_during;
+        end
+        else if(game_state==`state_during&&has_collision)begin
+            game_state<=`state_collision;
+        end
+        else if(game_state==`state_collision&&Timer==3)begin
+            Timer<=0;
+            game_state<=`state_over;
+        end
+        else if(game_state==`state_over&&Timer==3)begin
+            game_state<=`state_ready;
+            user_posx<=300;
+            user_posy<=320;
+            enemy1_posx<=10;
+            enemy1_posy<=10;
+            enemy2_posx<=450;
+            enemy2_posy<=170;
+        end
+    end
+    //游戏状态转变的控制
+    
+    
+    always@(posedge vs)begin
+        if(game_state==`state_during)begin
+            if(user_posy>`UP_BOUND&&SW==1'b1)begin
+                user_posy<=user_posy-BasicSpeed;
+            end//开启氮气加速
+            else if(user_posy+`car_height_pixel<`DOWN_BOUND)begin
+                user_posy<=user_posy+BasicSpeed;
+            end
+        end
+    end
+    //玩家车辆垂直方向的移动
+    
+    always@(posedge vs)begin
+        if(game_state==`state_during)begin
+             if(Direction==`to_right&&user_posx<`RIGHT_BOUND)begin
+                user_posx<=user_posx+BasicSpeed;
+             end
+             else if(Direction==`to_left&&user_posx>`LEFT_BOUND)begin
+                user_posx<=user_posx-BasicSpeed;
+             end
+        end     
+    end
+    //玩家车辆水平方向的移动
+    
+    always@(posedge vs)begin
+        if(game_state==`state_during)begin
+            if(enemy1_posy>0&&enemy1_posy<480)begin
+                enemy1_posy<=enemy1_posy+BasicSpeed;
+            end//在屏幕范围内移动的情况
+            else if(enemy1_posy>480)begin//跃出了屏幕显示的范围
+                enemy1_posy<=-`car_height_pixel;
+                enemy1_posx<=RandomX;
+            end
+        end
+    end
+    //对手车辆1的位置控制
+    always@(posedge vs)begin
+            if(game_state==`state_during)begin
+                if(enemy2_posy>0&&enemy2_posy<480)begin
+                    enemy2_posy<=enemy2_posy+BasicSpeed;
+                end//在屏幕范围内移动的情况
+                else if(enemy2_posy>480)begin//跃出了屏幕显示的范围
+                    enemy2_posy<=-`car_height_pixel;
+                    enemy2_posx<=RandomX;
+                end
+            end
+    end
+    //对手车辆2的位置控制
+    vga_sync vga_syn_inst(  
+                .clk            (clk_25mhz),  
+                .rst_n          (sys_rst_n),  
+                .video_en       (video_en),  
+                .hsync          (hsync),  
+                .vsync          (vsync),  
+                .pixel_x        (pixel_x),  
+                .pixel_y        (pixel_y)  
+                             
+            );//VGA同步控制模块  
+    integer clk_counter=0;        
+    always@(posedge clk25mhz)begin
+        case(game_state)
+            `state_collision:begin
+                if(clk_counter==25000000)begin
+                    TIMER<=TIMER+1;
+                    clk_counter<=0;
+                end
+            end
+            `state_over:begin
+                if(clk_counter==25000000)begin
+                    TIMER<=TIMER+1;
+                    clk_counter<=0;
+                end
+            end
+            default:begin
+                clk_counter<=0;
+                TIMER<=0;
+            end
+        endcase
+        clk_conuter<=clk_counter+1;
+    end
+    //延时模块
+    
+    
+    CollisionJudge cjinst(.vsync(vs),
+                        .user_posx(user_posx),
+                        .user_posy(user_posy),
+                        .enemy1_posx(enemy1_posx),
+                        .enemy2_posx(enemy2_posx),
+                        .enemy1_posy(enemy1_posy),
+                        .enemy2_posy(enemy2_posy),
+                        .has_collision(has_collision)
+                        );//碰撞判定模块
+                 
+   
+    //这里介入一个产生随机X的模块
+endmodule

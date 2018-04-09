@@ -1,0 +1,95 @@
+`timescale 1ns / 1ps
+
+module VGA(
+	input clk100mhz,
+	input [11:0]qsig,
+	input  sys_rst_n,    //WHEN 1, DISPLAY
+	output hsync,     
+	output vsync,    
+    output [3:0] OutBlue,
+    output [3:0] OutGreen, 
+    output [3:0] OutRed,
+	output reg[18:0]address_sig,
+	output [10:0]pixel_x,
+	output [10:0]pixel_y
+    );
+	
+wire            clk_25mhz;  
+reg [11:0]  rgb_reg;  
+
+
+assign rgb = (video_en == 1'b1) ? rgb_reg:12'b0;
+assign OutRed=rgb[11:8];
+assign OutGreen=rgb[7:4];
+assign OutBlue=rgb[3:0];
+   
+//显示静态图像640*480  
+reg     [23:0] cnt;  
+always @(posedge clk_25mhz or negedge sys_rst_n)  
+    if(!sys_rst_n)  
+        begin  
+            cnt <= 0;  
+            led <= 0;  
+        end   
+    else  
+           begin  
+            cnt <= cnt + 1'b1;  
+        if(cnt == 24'd12500000)  
+            begin   
+               cnt <= 24'b0;  
+               led <= ~led;  
+                end   
+        end   
+always @ (posedge clk_25mhz or negedge sys_rst_n)  
+    if(!sys_rst_n)  
+        begin  
+            rgb_reg <= 12'b0;  
+        end   
+    else  
+        begin               //显示图像  
+        //rgb_reg <= q_sig;            
+        rgb_reg[3:0] <= q_sig[7:4];  
+        rgb_reg[7:4] <= q_sig[3:0];  
+        rgb_reg[11:8] <= q_sig[11:8];      
+    end       
+always @ (posedge clk_25mhz or negedge sys_rst_n)  
+    if(!sys_rst_n)  
+        begin  
+            address_sig <= 19'b0;  
+        end   
+    else  
+    begin                 
+        if(pixel_x>=0 && pixel_x<= 639 && pixel_y>=0 && pixel_y<=479)  
+        address_sig = (pixel_x + 640*pixel_y);  
+    end   
+  
+  
+  
+//////////////////////////////////////////////////////////////        
+ 
+  
+vga_sync vga_syn_inst(  
+            .clk            (clk_25mhz),  
+            .rst_n          (sys_rst_n),  
+            .video_en       (video_en),  
+            .hsync          (hsync),  
+            .vsync          (vsync),  
+            .pixel_x        (pixel_x),  
+            .pixel_y        (pixel_y)                
+        );  
+  
+
+/*
+  RAM_MANAGER RAM_MANAGER_INST(.clk_rmg(clk_25mhz),.rst(0),.address_sig(address_sig),.game_state(`state_during),.user_posx(0),.user_posy(0),
+  .enemy1_posx(110),.enemy1_posy(-80),.enemy2_posx(250),.enemy2_posy(250),.pixel_x(pixel_x),.pixel_y(pixel_y), .rgb(q_sig));
+  */
+clk_wiz_0 clk_wiz_0_inst   
+       (  
+       // Clock in ports  
+        .clk_in1(sys_clk),  
+        // Clock out ports  
+        .clk_out1(clk_25mhz)  
+       );  
+                 
+endmodule  
+	
